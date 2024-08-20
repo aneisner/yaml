@@ -1,13 +1,13 @@
 person:
-  name: Madan Reddy
-  age: 35
+  name: Toni Eisner
+  age: 50
   gender: M
-  is_student: false
+  is_student: true
   hobbies:
     - reading
-    - travelling
-    - hiking
+    - painting
+    - something
   address:
-    street: 123 Main St
-    city: SomeCity
-    zipCode: 12345
+    street: Foobar Str. 29
+    city: Nürnberg
+    zipCode: 90456
