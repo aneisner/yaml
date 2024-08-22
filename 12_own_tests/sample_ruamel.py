@@ -1,10 +1,12 @@
-import yaml
+from ruamel.yaml import YAML
 from tabulate import tabulate
 import os
 
 def read_yaml(file_path):
+    yaml = YAML(typ='safe')
+    yaml.version = (1, 2)
     with open(file_path, 'r') as file:
-        return yaml.safe_load(file)
+        return yaml.load(file)
 
 def display_as_table(data, parent_key=''):
     rows = []
@@ -32,5 +34,5 @@ def main(file_path):
 if __name__ == "__main__":
     # Assuming the YAML file is in the same directory as this script
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    yaml_file_path = os.path.join(script_dir, 'sample.yml') # Intel_SR1630_IPMI.yaml
+    yaml_file_path = os.path.join(script_dir, 'test1.yml')
     main(yaml_file_path)
